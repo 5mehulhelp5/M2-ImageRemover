@@ -5,9 +5,11 @@ Preview (no changes), verbose list:
 
 bin/magento merlin:image-remover:scan --dry-run -v
 
+
 Faster preview (skip deep JSON/serialized decoding but still DB-wide):
 
 bin/magento merlin:image-remover:scan --dry-run --db-fast
+
 
 Skip DB-wide pass entirely:
 
@@ -42,11 +44,14 @@ Preserves favicons/logos and any refs found anywhere in your DB (thanks to the w
 
 Amasty Mega Menu extractor preserves icons/banners/backgrounds from mega menu configs.
 
+
 ** Optional Safeguards:
 If your homepage uses a known PB folder, you can temporarily exclude it:
+
 bin/magento merlin:image-remover:scan --dry-run -e wysiwyg/homepage -e pagebuilder
 
-Changelog
+
+** Changelog
 v.1.4.1
 Fix: Issue with detecting all pagebuilder images fixed.
 
