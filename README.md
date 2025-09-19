@@ -46,9 +46,11 @@ Preview (no changes), verbose list:
 bin/magento merlin:image-remover:scan --dry-run -v
 
 
+
 Faster preview (skip deep JSON/serialized decoding but still DB-wide):
 
 bin/magento merlin:image-remover:scan --dry-run --db-fast
+
 
 
 Skip DB-wide pass entirely:
@@ -60,9 +62,12 @@ bin/magento merlin:image-remover:scan
 
 Actually delete (prompts 'yes/no'):
 
+
+
 Delete without prompt:
 
 bin/magento merlin:image-remover:scan -y
+
 
 
 Exclude additional prefixes under pub/media (repeat -e):
@@ -71,6 +76,8 @@ bin/magento merlin:image-remover:scan --dry-run -e amasty/webp/wysiwyg -e logo -
 
 
 ** Built-in protections
+
+
 
 Skips cache/system dirs: catalog/product/cache/, tmp/, captcha/, import/, downloadable/tmp/.
 
@@ -83,6 +90,7 @@ Page Builder extractor preserves background images/icons referenced via data-bac
 Preserves favicons/logos and any refs found anywhere in your DB (thanks to the whole-DB + config scans).
 
 Amasty Mega Menu extractor preserves icons/banners/backgrounds from mega menu configs.
+
 
 
 ** Optional Safeguards:
