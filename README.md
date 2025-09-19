@@ -38,6 +38,9 @@ Initial product/category/CMS scans, dry-run, confirmations.
 
 
 ** Usage
+
+
+
 Preview (no changes), verbose list:
 
 bin/magento merlin:image-remover:scan --dry-run -v
