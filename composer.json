@@ -1,0 +1,19 @@
+{
+  "name": "merlin/module-image-remover",
+  "description": "CLI tool to remove unused images from pub/media by scanning references across the entire DB, products, categories, CMS, config, Page Builder, and module-specific sources.",
+  "type": "magento2-module",
+  "version": "1.4.1",
+  "license": "OSL-3.0",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Merlin\\ImageRemover\\": ""
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "magento/framework": "*"
+  }
+}
