@@ -1,6 +1,42 @@
 Merlin Unused ImageRemover v1.4.1 with Page Builder support.
 Removes all unused images from /pub/media that are not being used by products, cms pages, pagebuilder or Amasty's MegaMenu
 
+** Changelog
+
+
+v.1.4.1
+Fix: Issue with detecting all pagebuilder images fixed.
+
+v1.4.0
+New: Page Builder extractor parses data-background-images JSON (even when HTML-entity encoded), src/srcset, and inline background-image:url(...) to keep PB assets.
+Minor: expanded generic HTML parsing for srcset and data-src attributes.
+
+v1.3.3
+Fix PHP syntax issues in previous builds; clean, validated classes.
+Keep logo/* by default and read logos/favicons from config.
+
+v1.3.2
+Preserve store logos & favicons via ConfigExtractor of core_config_data (e.g., design/header/logo_src, design/email/logo, sales/identity/logo, design/head/shortcut_icon).
+Default protection for logo/ (skip deletion).
+
+v1.3.1
+Hard-skip pub/media/amasty/webp/ (incl. wysiwyg/), add --exclude.
+
+v1.3.0
+Add Amasty Mega Menu extractor.
+
+v1.2.0
+Intensive DB scan with JSON/serialized/URL/HTML decoding; stop ignoring favicon/.
+
+v1.1.0
+Whole-DB scanner enabled by default; --no-db-scan to skip.
+
+v1.0.x
+Initial product/category/CMS scans, dry-run, confirmations.
+
+
+
+
 ** Usage
 Preview (no changes), verbose list:
 
@@ -50,37 +86,3 @@ Amasty Mega Menu extractor preserves icons/banners/backgrounds from mega menu co
 If your homepage uses a known PB folder, you can temporarily exclude it:
 
 bin/magento merlin:image-remover:scan --dry-run -e wysiwyg/homepage -e pagebuilder
-
-
-** Changelog
-
-
-v.1.4.1
-Fix: Issue with detecting all pagebuilder images fixed.
-
-v1.4.0
-New: Page Builder extractor parses data-background-images JSON (even when HTML-entity encoded), src/srcset, and inline background-image:url(...) to keep PB assets.
-Minor: expanded generic HTML parsing for srcset and data-src attributes.
-
-v1.3.3
-Fix PHP syntax issues in previous builds; clean, validated classes.
-Keep logo/* by default and read logos/favicons from config.
-
-v1.3.2
-Preserve store logos & favicons via ConfigExtractor of core_config_data (e.g., design/header/logo_src, design/email/logo, sales/identity/logo, design/head/shortcut_icon).
-Default protection for logo/ (skip deletion).
-
-v1.3.1
-Hard-skip pub/media/amasty/webp/ (incl. wysiwyg/), add --exclude.
-
-v1.3.0
-Add Amasty Mega Menu extractor.
-
-v1.2.0
-Intensive DB scan with JSON/serialized/URL/HTML decoding; stop ignoring favicon/.
-
-v1.1.0
-Whole-DB scanner enabled by default; --no-db-scan to skip.
-
-v1.0.x
-Initial product/category/CMS scans, dry-run, confirmations.
