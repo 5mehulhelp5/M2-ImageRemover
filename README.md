@@ -2,16 +2,20 @@ Merlin ImageRemover v1.4.1 with Page Builder support.
 
 ** Usage
 Preview (no changes), verbose list:
+
 bin/magento merlin:image-remover:scan --dry-run -v
 
 Faster preview (skip deep JSON/serialized decoding but still DB-wide):
+
 bin/magento merlin:image-remover:scan --dry-run --db-fast
 
 Skip DB-wide pass entirely:
+
 bin/magento merlin:image-remover:scan --dry-run --no-db-scan
 
 
 bin/magento merlin:image-remover:scan
+
 Actually delete (prompts 'yes/no'):
 
 Delete without prompt:
