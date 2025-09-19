@@ -1,4 +1,5 @@
-Merlin ImageRemover v1.4.1 with Page Builder support.
+Merlin Unused ImageRemover v1.4.1 with Page Builder support.
+Removes all unused images from /pub/media that are not being used by products, cms pages, pagebuilder or Amasty's MegaMenu
 
 ** Usage
 Preview (no changes), verbose list:
