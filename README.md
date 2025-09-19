@@ -52,6 +52,8 @@ bin/magento merlin:image-remover:scan --dry-run -e wysiwyg/homepage -e pagebuild
 
 
 ** Changelog
+
+
 v.1.4.1
 Fix: Issue with detecting all pagebuilder images fixed.
 
